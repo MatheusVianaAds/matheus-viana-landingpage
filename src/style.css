@@ -176,7 +176,7 @@ a {
 }
 
 .pain-card {
-  flex: 0 0 82%;
+  flex: 0 0 90%;
   scroll-snap-align: start;
   background: #ffffff;
   border-radius: 14px;
