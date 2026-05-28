@@ -34,7 +34,7 @@ a {
   width: 100%;
   height: auto;
   padding: 24px 16px 32px;
-  background-image:var(--hero-bg-mobile);
+  background-image: var(--hero-bg-mobile);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -124,10 +124,93 @@ a {
   transform: translateY(-1px);
 }
 
+.pain-section {
+  padding: 48px 0 56px;
+  background: #f3f6ff;
+}
+
+.pain-section__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.pain-section__header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.pain-section__title {
+  margin: 0;
+  font-size: clamp(1.6rem, 5vw, 2.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  color: #202531;
+}
+
+.pain-section__title span {
+  color: #4f8df7;
+}
+
+.pain-section__subtitle {
+  margin: 10px 0 0;
+  font-size: 0.98rem;
+  color: #707784;
+}
+
+.pain-section__track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.pain-section__track::-webkit-scrollbar {
+  display: none;
+}
+
+.pain-card {
+  flex: 0 0 82%;
+  scroll-snap-align: start;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid rgba(20, 34, 66, 0.06);
+}
+
+.pain-card__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #f0f2f6, #e7ebf2);
+  margin-bottom: 16px;
+}
+
+.pain-card__title {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #263046;
+  font-weight: 700;
+}
+
+.pain-card__text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #5f6779;
+}
+
 @media (min-width: 768px) {
   .hero {
     padding: 40px 32px 48px;
-    background-image:var(--hero-bg-tablet);
+    background-image: var(--hero-bg-tablet);
     padding-bottom: 30vh;
   }
 
@@ -151,6 +234,27 @@ a {
   .hero__cta {
     margin-bottom: 20rem;
   }
+
+  .pain-section {
+    padding: 64px 0 72px;
+  }
+
+  .pain-section__container {
+    padding: 0 32px;
+  }
+
+  .pain-section__track {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .pain-card {
+    flex: 0 0 48%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -160,7 +264,7 @@ a {
     padding: 56px 48px;
     display: flex;
     align-items: center;
-    background-image:var(--hero-bg-desktop);
+    background-image: var(--hero-bg-desktop);
   }
 
   .hero__content {
@@ -177,8 +281,26 @@ a {
     max-width: 52ch;
     font-size: 1.05rem;
   }
-   .hero__cta {
-     margin-bottom: 12px;
+
+  .hero__cta {
+    margin-bottom: 12px;
+  }
+
+  .pain-section__header {
+    margin-bottom: 36px;
+  }
+
+  .pain-section__track {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: visible;
+    padding-bottom: 0;
+    gap: 20px;
+  }
+
+  .pain-card {
+    flex: initial;
+    padding: 20px 40px;
   }
 
 }
