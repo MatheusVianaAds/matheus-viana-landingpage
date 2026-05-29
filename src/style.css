@@ -206,6 +206,7 @@ a {
   line-height: 1.55;
   color: #5f6779;
 }
+
 .impact-section {
   padding: 56px 0 64px;
   background: #0b0b0d;
@@ -342,6 +343,139 @@ a {
   background: #3f7ee9;
   transform: translateY(-1px);
 }
+
+.advantage-section {
+  padding: 56px 0 64px;
+  background: #f0f4ff;
+  color: #1b2233;
+}
+
+.advantage-section__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.advantage-section__header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.advantage-section__eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: #5a79c7;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.advantage-section__title {
+  margin: 0;
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+  color: #111827;
+}
+
+.advantage-section__title span {
+  color: #4f8df7;
+}
+
+.advantage-section__subtitle {
+  margin: 14px auto 0;
+  max-width: 58ch;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: #6b7280;
+}
+
+.advantage-section__track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.advantage-section__track::-webkit-scrollbar {
+  display: none;
+}
+
+.advantage-card {
+  min-height: 300px;
+  flex: 0 0 90%;
+  scroll-snap-align: start;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 22px 18px 20px;
+  border: 1px solid rgba(20, 34, 66, 0.08);
+  box-shadow: 0 5px 5px rgba(16, 24, 40, 0.06);
+}
+
+.advantage-card__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #f4f6fa, #e9edf5);
+  margin-bottom: 16px;
+}
+
+.advantage-card__title {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  line-height: 1.15;
+  font-weight: 800;
+  color: #1c2436;
+}
+
+.advantage-card__title span {
+  color: #4f8df7;
+}
+
+.advantage-card__text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #5f6779;
+}
+
+.advantage-section__cta {
+  margin-top: 26px;
+  padding: 18px 16px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(79, 141, 247, 0.12), rgba(79, 141, 247, 0.06));
+  border: 1px solid rgba(79, 141, 247, 0.14);
+  text-align: center;
+}
+
+.advantage-section__cta-text {
+  margin: 0 0 16px;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: #2b3242;
+}
+
+.advantage-section__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 28px;
+  border-radius: 999px;
+  background: #4f8df7;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(79, 141, 247, 0.18);
+}
+
 @media (min-width: 768px) {
   .hero {
     padding: 40px 32px 48px;
@@ -391,7 +525,7 @@ a {
     flex: 0 0 48%;
   }
 
-   .impact-section {
+  .impact-section {
     padding: 72px 0 80px;
   }
 
@@ -403,16 +537,55 @@ a {
     margin-bottom: 34px;
   }
 
-  .impact-section__grid{
+  .impact-section__grid {
     width: 80%;
     margin: 0 auto;
   }
 
-  .impact-card{
-      min-height: 300px;
+  .impact-card {
+    min-height: 300px;
   }
 
- 
+  .advantage-section {
+    padding: 72px 0 80px;
+  }
+
+  .advantage-section__container {
+    padding: 0 32px;
+  }
+
+  .advantage-section__header {
+    margin-bottom: 34px;
+  }
+
+  .advantage-section__track {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+  }
+
+  .advantage-card {
+    flex: 0 0 48%;
+  }
+
+  .advantage-section__cta {
+    margin-top: 32px;
+    padding: 20px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: left;
+  }
+
+  .advantage-section__cta-text {
+    margin: 0;
+    max-width: 46ch;
+  }
+
+
 }
 
 @media (min-width: 1024px) {
@@ -461,7 +634,7 @@ a {
     padding: 20px 40px;
   }
 
-   .impact-section__grid {
+  .impact-section__grid {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -513,7 +686,24 @@ a {
     margin-top: 44px;
   }
 
- 
+  .advantage-section__track {
+    margin: 4rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: visible;
+  }
+
+  .advantage-section__subtitle{
+     max-width: 75ch;
+  }
+
+  .advantage-card {
+    flex: initial;
+  }
+
+  .advantage-section__cta {
+    padding: 22px 24px;
+  }
+
+
 }
-
-
