@@ -938,6 +938,77 @@ a { color: inherit; }
 
 .site-footer__copyright { margin: 0; }
 
+.pain-card,
+.impact-card,
+.advantage-card,
+.who-card,
+.faq-item,
+.process-section__card,
+.site-footer__cta {
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  will-change: transform;
+}
+
+.pain-card:hover,
+.impact-card:hover,
+.advantage-card:hover,
+.who-card:hover,
+.faq-item:hover,
+.process-section__card:hover,
+.site-footer__cta:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.10),
+    0 0 0 1px rgba(79, 141, 247, 0.10);
+  border-color: rgba(79, 141, 247, 0.14);
+}
+
+.pain-card::after,
+.impact-card::after,
+.advantage-card::after,
+.who-card::after,
+.faq-item::after,
+.process-section__card::after,
+.site-footer__cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 15%, rgba(79, 141, 247, 0.20), transparent 40%);
+  opacity: 0;
+  transition: opacity 0.32s ease;
+  pointer-events: none;
+}
+
+.pain-card:hover::after,
+.impact-card:hover::after,
+.advantage-card:hover::after,
+.who-card:hover::after,
+.faq-item:hover::after,
+.process-section__card:hover::after,
+.site-footer__cta:hover::after {
+  opacity: 1;
+}
+
+.site-footer__button,
+.who-section__cta,
+.faq-section__button,
+.process-section__cta,
+.advantage-section__button,
+.hero__cta {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease, background 0.2s ease;
+}
+
+.site-footer__button:hover,
+.who-section__cta:hover,
+.faq-section__button:hover,
+.process-section__cta:hover,
+.advantage-section__button:hover,
+.hero__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(79, 141, 247, 0.18);
+  filter: brightness(1.03);
+}
+
 /* ─── MEDIA QUERIES ────────────────────────────────────── */
 
 @media (min-width: 768px) {
