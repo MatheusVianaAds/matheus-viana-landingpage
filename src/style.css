@@ -1195,6 +1195,10 @@ a { color: inherit; }
   .about-section__paragraph { font-size: 0.98rem; line-height: 1.75; }
   .about-section__tags { margin-top: 18px; }
 
+  .faq-section__header {
+    text-align: left;
+  }
+
   .site-footer__benefits { display: flex; }
   .site-footer__benefits li { padding-left: 17px; }
 
