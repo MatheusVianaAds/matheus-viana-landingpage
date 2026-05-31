@@ -74,3 +74,23 @@ carousels.forEach((carousel) => {
         if (current >= 0) index = current;
     }, { passive: true });
 });
+
+const revealCards = document.querySelectorAll('.reveal-card, .reveal-left');
+
+if ('IntersectionObserver' in window && revealCards.length) {
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                obs.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -8% 0px'
+    });
+
+    revealCards.forEach((card) => observer.observe(card));
+} else {
+    revealCards.forEach((card) => card.classList.add('is-visible'));
+}
