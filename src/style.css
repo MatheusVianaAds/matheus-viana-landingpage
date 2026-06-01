@@ -106,14 +106,22 @@ a {
   height: 60px;
   border-radius: 999px;
   margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.pain-card__icon {
-  background: linear-gradient(180deg, #f0f2f6, #e7ebf2);
+.pain-card__icon img,
+.advantage-card__icon img,
+.who-card__icon img{
+  width: 35px;
 }
+
+
 
 .advantage-card__icon,
-.who-card__icon {
+.who-card__icon,
+.pain-card__icon  {
   background: linear-gradient(180deg, #f4f6fa, #e9edf5);
 }
 
