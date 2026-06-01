@@ -1,5 +1,5 @@
 :root {
-  --hero-bg-mobile: url('/src/assets/banner-mobile.jpeg')
+  --hero-bg-mobile: url('/src/assets/banner-mobile.jpeg');
   --hero-bg-tablet: url('/src/assets/banner-tablet.png');
   --hero-bg-desktop: url('/src/assets/banner-desktop.jpeg');
   --color-text: #ffffff;
