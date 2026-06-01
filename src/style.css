@@ -7,6 +7,7 @@
   --color-accent: #4f8df7;
   --color-accent-hover: #3f7ee9;
   --color-surface: rgba(255, 255, 255, 0.08);
+  --font-Fraunces: "Fraunces", serif;
   --max-width: 1200px;
 }
 
@@ -32,7 +33,8 @@ a {
 /* ─── SHARED UTILITIES ─────────────────────────────────── */
 
 
-.advantage-section__button-div,.who-section__button-div{
+.advantage-section__button-div,
+.who-section__button-div {
   text-align: center;
   margin: 2rem auto;
 }
@@ -241,6 +243,7 @@ a {
   letter-spacing: -0.04em;
   font-weight: 400;
   color: #f4f4f4;
+  font-family: var(--font-Fraunces);
 }
 
 .pain-section__title span,
@@ -253,7 +256,9 @@ a {
 .impact-section__cta-text span {
   color: #4f8df7;
 }
-
+.impact-section__cta-text span {
+  font-family: var(--font-Fraunces);
+}
 /* ─── HERO ─────────────────────────────────────────────── */
 
 .hero {
@@ -419,6 +424,7 @@ a {
   font-weight: 300;
   color: rgba(79, 141, 247, 0.18);
   letter-spacing: -0.06em;
+  font-family: var(--font-Fraunces);
 }
 
 .impact-card__tag {
