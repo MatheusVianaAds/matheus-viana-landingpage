@@ -31,6 +31,13 @@ a {
 
 /* ─── SHARED UTILITIES ─────────────────────────────────── */
 
+
+.advantage-section__button-div,.who-section__button-div{
+  text-align: center;
+  margin: 2rem auto;
+}
+
+
 .pain-section__container,
 .impact-section__container,
 .advantage-section__container,
@@ -1091,6 +1098,19 @@ a {
   transform: translateX(0);
 }
 
+.pulse-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 1.8s infinite;
+  will-change: transform, box-shadow;
+}
+
+.pulse-btn:hover,
+.pulse-btn:focus-visible {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal-card {
     opacity: 1;
@@ -1102,6 +1122,10 @@ a {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .pulse-btn {
+    animation: none;
   }
 }
 
@@ -1622,5 +1646,22 @@ a {
   .reveal-card.is-visible {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(79, 141, 247, 0.45);
+  }
+
+  70% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 14px rgba(79, 141, 247, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(79, 141, 247, 0);
   }
 }
