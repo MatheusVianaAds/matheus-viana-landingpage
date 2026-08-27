@@ -642,18 +642,6 @@ a {
   color: rgba(255, 255, 255, 0.66);
 }
 
-.process-section__list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.35em;
-  width: 16px;
-  height: 16px;
-  border-radius: 999px;
-  background: #4f8df7;
-  box-shadow: 0 0 0 4px rgba(79, 141, 247, 0.14);
-}
-
 .process-section__cta {
   background: #4f8df7;
   color: #fff;
@@ -971,7 +959,7 @@ a {
   color: rgba(255, 255, 255, 0.76);
 }
 
-.site-footer__benefits li::before {
+.site-footer__benefits li::before , .process-section__list li::before{
   content: "✓";
   position: absolute;
   left: 0;
