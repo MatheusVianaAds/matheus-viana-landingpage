@@ -5,8 +5,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        leadQualification: resolve(__dirname, 'lead-qualification.html')
+        main: resolve(__dirname, 'index.html')
       }
     }
   }
